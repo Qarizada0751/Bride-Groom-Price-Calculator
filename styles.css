@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #242424;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    color: #FF6347; /* Tomato color */
+    letter-spacing: 2px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #bdbdbd;
+}
+
+select, input[type="checkbox"], input[type="radio"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+select:hover, input[type="checkbox"]:hover, input[type="radio"]:hover {
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8);
+    border-color: #FF6347;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 15px;
+}
+
+.form-group div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calculateButton {
+    flex: 1 1 100%;
+    padding: 18px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+#calculateButton:hover {
+    background-color: #e5533b;
+    transform: scale(1.05);
+}
+
+#result {
+    flex: 1 1 100%;
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    border: 2px solid #FF6347;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+#result:hover {
+    background-color: #292929;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    #calculateButton {
+        font-size: 1.1rem;
+    }
+
+    #result {
+        font-size: 1.4rem;
+    }
+}
